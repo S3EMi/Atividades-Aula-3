@@ -21,11 +21,17 @@ def restart():
 
     import math as mt
 
-    x1 = float(input("Digite o x1: "))
-    x2 = float(input("Digite o x2: "))
-    y1 = float(input("Digite o y1: "))
-    y2 = float(input("Digite o y2: "))
+    x1 = input("Digite o x1: ")
+    x2 = input("Digite o x2: ")
+    y1 = input("Digite o y1: ")
+    y2 = input("Digite o y2: ")
 
+    try:
+        float(x1), float(x2), float(y1), float(y2)
+    except ValueError:
+        print("Valores não identificados, tente novamente.")
+        gotor()
+        
     calc = mt.sqrt((x2 - x1)**2 + (y2 - y1)**2)
     resp = round(calc, 4)
     print("\nA resposta é: ", resp)
