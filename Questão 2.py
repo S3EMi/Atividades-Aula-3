@@ -19,24 +19,19 @@ def restart():
         input("\nPressione ENTER para continuar...")
     
     kmh = input("Digite a velocidade média da viagem: ")
-
-    try:
-        float(kmh)
-    except ValueError:
-        print("Valores não identificados, tente novamente.")
-        gotor()
-    
     h = input("Digite o tempo da viagem (em horas): ")
     
     try:
-        float(h)
+        float(h), float(kmh)
     except ValueError:
         print("Valores não identificados, tente novamente.")
         gotor()
+    except Exception:
+        print("Aconteceu um erro, tente novamente.")
 
     cal = (float(kmh)*float(h))
     litrosn = round(cal/12, 3)
-    print("Será necessário ", litrosn, " Litros.")
+    print("\nSerá necessário ", litrosn, " Litros.")
     gotor()
 
 restart()
