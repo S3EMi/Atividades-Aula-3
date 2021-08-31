@@ -11,7 +11,7 @@ def clearConsole():
 #Def: cria ua função com o nome a seguir
 def restart():
     def gotor():
-#if: cria uma condição condição
+#if: cria uma condição
         pause()
         if pause == "":
             clearConsole()
